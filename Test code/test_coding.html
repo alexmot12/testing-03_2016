@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			function parentFunction() {
+			  console.log( 'Вызвана функция родитель.' );
+			  var x = 10;
+			  return (function childFunc() {
+			    var y = 11,
+			    	x = -10;
+
+			    return x + y;
+			   		} )();
+			}
+			parentFunction();
+		</script>
+	</body>
+</html>>
