@@ -1,0 +1,42 @@
+<script>
+
+	// function getNumber(str) {
+	// 	return str.match(/\d/)[0];
+	// }
+	// console.log(getNumber("string2cdhf5jgh3hyeyhe"));
+
+	function getNumbers(str) {
+		var arr = str.match(/\d/g);
+		for (var i = 0; i < arr.length; i++) {
+			arr[i] = parseInt(arr[i]);
+		}
+		return arr;
+	}
+	console.log(getNumbers("string2cdhf5jgh3hyeyhe"));
+
+
+	// var b1 = [-1, -2, 3, 4, 5];
+	// var b2 = [2, 3, 4, -6, -9, -4];
+	// function getSumOfNegative(arr1, arr2) {
+	// 	var sum = 0;
+	// 	for (var i = 0; i < arr1.length; i++) {
+	// 		if (arr1[i] < 0) {
+	// 			sum += arr1[i];
+	// 		}
+	// 	}
+	// 	for (var j = 0; j < arr2.length; j++) {
+	// 		if (arr2[j] < 0) {
+	// 			sum += arr2[j];
+	// 		}
+	// 	}
+
+	// 	return sum;
+	// }
+	// console.log(getSumOfNegative(b1, b2));
+
+
+
+
+
+
+</script>
