@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			try {
+			function identityMatrix(size) { 
+				if (size < 0 || size > 10) {	//check for range from 1 to 10
+					console.log('Your entered numbers out of range. Please enter in range from 1 to 10');
+					return;
+				}
+				var arr = [];
+				var arr2 = [];
+				for (var i = 0; i < size; i++) { //create main array
+					for (var j = 0; j < size; j++) { //create array in array
+						arr2[j] = 0;
+					}
+					arr[i] = arr2;
+					arr[i][i] = 1;
+					console.log(arr2); // output matrix to console
+				}
+				return arr;
+			}
+
+			console.log(identityMatrix(5));
+
+		console.log('------------------------------');
+	} catch (err) {
+		console.log(typeof e);
+		  console.log('Ошибка ' + e.name + ":" + e.message + "\n");
+		  console.log(e.stack);
+	}
+			
+
+		// arr1 = [2, 3, 3, 5, 8, 8, 8, 9, 0, 1, 8, 55, 555,55, 7, 33];
+		// 	arr2 = [4, 3, 3, 3, 7, 8, 55, 0, 1, 55, 555, 33];
+		// 	function commonElements(arr1, arr2) {
+		// 		var newArr = []; // array for new elements
+		// 		for (var i = 0; i < arr1.length; i++) {
+		// 			for (var j = 0; j < arr2.length; j++) {
+		// 				if ((arr1[i] === arr2[j]) && !checkElement(newArr, arr1[i])) {
+		// 					newArr.push(arr1[i]);
+		// 				}
+		// 			}
+		// 		}
+		// 		return newArr;
+
+		// 		//function for checking: if we have already this element in newArray
+		// 		function checkElement(array, element) {
+		// 			var value = false;
+		// 			for (var k = 0; k < array.length; k++) {
+		// 				if (array[k] === element) {
+		// 					return value = true;
+		// 				}
+		// 			}
+		// 			return value;
+		// 		}
+
+		// 	}
+
+		// 	console.log(commonElements(arr1, arr2));
+
+
+
+
+// arr = [4, 4, -3, 0, -7, 0, 1, -9, 0, -1, 5, -2];
+// 			function negativeElementsSum(arr) {
+// 				var sum = 0; 
+// 				var j;
+// 				function findZeroIndex() {
+// 					for (var i = 0; i < arr.length; i++) {
+// 						if (arr[i] === 0) {
+// 							return i;
+// 						}
+// 					}
+// 				}
+// 				j = findZeroIndex(); 
+// 				for (; j < arr.length; j++) {
+// 					if (arr[j] < 0) {
+// 						sum = sum + arr[j];
+// 					}
+// 				}
+// 				return sum;
+// 			}
+
+// 			console.log('Sum of the negative elements are: ' +negativeElementsSum(arr));
+
+
+
+			// function ttt() {
+			// 	var tt = 15;
+			// 	return tt;
+			// }
+
+			// var b = ttt();
+
+			// function parentFunction() {
+			//   console.log('Вызвана функция родитель.: ' + b);
+			//   var x = 10;
+			//   // return (function childFunc() {
+			//   //   var y = 11,
+			//   //   	x = -10;
+
+			//   //   return x + y;
+			//    		// } )();
+			// }
+			// parentFunction();
+
+
+		</script>
+	</body>
+</html>

@@ -11,7 +11,7 @@ function guessLetter(letter) {
  	
   	for (var k = 0; k < tryLetters.length; k++)	{ //проверка на уже введеной ранее буквы
  		if (letter === tryLetters[k]) {
- 			console.log('You are already inputed this letter');
+ 			console.log('You have already inputed this letter');
  			checkLevel2 = true;
  			break;
  		}
