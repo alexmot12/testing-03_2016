@@ -6,33 +6,36 @@
 	</head>
 	<body>
 		<script>
-			try {
-			function identityMatrix(size) { 
-				if (size < 0 || size > 10) {	//check for range from 1 to 10
-					console.log('Your entered numbers out of range. Please enter in range from 1 to 10');
-					return;
-				}
-				var arr = [];
-				var arr2 = [];
-				for (var i = 0; i < size; i++) { //create main array
-					for (var j = 0; j < size; j++) { //create array in array
-						arr2[j] = 0;
-					}
-					arr[i] = arr2;
-					arr[i][i] = 1;
-					console.log(arr2); // output matrix to console
-				}
-				return arr;
-			}
-
-			console.log(identityMatrix(5));
-
-		console.log('------------------------------');
-	} catch (err) {
-		console.log(typeof e);
-		  console.log('Ошибка ' + e.name + ":" + e.message + "\n");
-		  console.log(e.stack);
+function identityMatrix(size) {
+	if (size < 1 || size > 10) {	//check for range from 1 to 10
+		console.log('Your entered numbers out of range. Please enter in range from 1 to 10');
+		return null;
 	}
+	var arr = [];
+	// var arr2 = []; // array for outpt matrix to console
+	for (var i = 0; i < size; i++) { //create main array
+		arr[i] = [];
+		for (var j = 0; j < size; j++) { //create array in array
+			arr[i][j] = 0;
+		}
+		
+		// for (var k = 0; k < arr2.length; k++) {
+		// 	arr[k] = arr2[k];
+		// }
+
+
+		// arr[i] = arr2; 
+		arr[i][i] = 1;
+		// console.log(arr2); // output matrix to console
+	}
+	console.log(arr); 
+
+	return arr;
+}
+	
+
+	console.log(identityMatrix(3));
+
 			
 
 		// arr1 = [2, 3, 3, 5, 8, 8, 8, 9, 0, 1, 8, 55, 555,55, 7, 33];
